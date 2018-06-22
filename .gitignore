@@ -268,3 +268,7 @@ gradle-app.setting
 
 
 # End of https://www.gitignore.io/api/java,gradle,kotlin,android,intellij,androidstudio
+
+# for signing
+app/signing/release.gradle
+app/signing/release.jks

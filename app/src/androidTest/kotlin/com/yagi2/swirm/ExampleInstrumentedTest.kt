@@ -1,12 +1,10 @@
-package com.yagi2.simplecheckin4swarm
+package com.yagi2.swirm
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
-
+import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
-
-import org.junit.Assert.*
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -19,6 +17,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("com.yagi2.simplecheckin4swarm", appContext.packageName)
+        assertEquals("com.yagi2.swirm", appContext.packageName)
     }
 }
