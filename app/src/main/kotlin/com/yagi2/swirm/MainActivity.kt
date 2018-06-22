@@ -1,4 +1,4 @@
-package com.yagi2.simplecheckin4swarm
+package com.yagi2.swirm
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle

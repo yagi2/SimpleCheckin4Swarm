@@ -1,8 +1,7 @@
-package com.yagi2.simplecheckin4swarm
+package com.yagi2.swirm
 
+import org.junit.Assert.assertEquals
 import org.junit.Test
-
-import org.junit.Assert.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).
