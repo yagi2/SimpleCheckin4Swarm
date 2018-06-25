@@ -2,6 +2,4 @@
     <string name="app_name">Swirm</string>
 
     <string name="loading_announce_message">屋内など屋根の下では取得に時間がかかる場合があります</string>
-    <string name="title_activity_maps">Map</string>
-
 </resources>
