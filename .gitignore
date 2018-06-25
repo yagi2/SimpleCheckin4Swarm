@@ -272,3 +272,6 @@ gradle-app.setting
 # for signing
 app/signing/release.gradle
 app/signing/release.jks
+
+# for google map api
+google_maps_api.xml
