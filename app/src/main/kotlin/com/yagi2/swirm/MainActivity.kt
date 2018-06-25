@@ -1,6 +1,7 @@
 package com.yagi2.swirm
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Context
 import android.location.Location
 import android.location.LocationListener
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
 
     override fun onMapReady(googleMap: GoogleMap) {
         this.googleMap = googleMap
-        getCurrentLocationWithPermissionCheck(this.googleMap)
+        getCurrentLocationWithPermissionCheck()
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
@@ -56,8 +57,9 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
         mapFragment.getMapAsync(this)
     }
 
+    @SuppressLint("MissingPermission")
     @NeedsPermission(Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION)
-    fun getCurrentLocation(map: GoogleMap) {
+    fun getCurrentLocation() {
         googleMap.isMyLocationEnabled = true
 
         MapsInitializer.initialize(this)
