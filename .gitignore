@@ -275,3 +275,6 @@ app/signing/release.jks
 
 # for google map api
 google_maps_api.xml
+
+# for 4sq api token
+4sq_token.xml

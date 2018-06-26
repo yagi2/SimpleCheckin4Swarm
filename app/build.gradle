@@ -90,6 +90,8 @@ dependencies {
     }
     kapt 'com.github.hotchemi:permissionsdispatcher-processor:3.3.1'
 
+    implementation 'com.foursquare:foursquare-android-oauth:1.0.3'
+
     testImplementation 'junit:junit:4.12'
 
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
