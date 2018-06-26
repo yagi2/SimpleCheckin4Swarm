@@ -28,6 +28,11 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_maps_key"
             />
+
+        <activity
+            android:name="com.foursquare.android.nativeoauth.TokenExchangeActivity"
+            android:theme="@android:style/Theme.Dialog"
+            />
     </application>
 
 </manifest>
