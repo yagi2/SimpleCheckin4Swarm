@@ -85,10 +85,10 @@ dependencies {
 
     implementation 'com.google.android.gms:play-services-maps:15.0.1'
 
-    implementation ('com.github.hotchemi:permissionsdispatcher:3.2.0') {
+    implementation ('com.github.hotchemi:permissionsdispatcher:3.3.1') {
         exclude module: "support-v13"
     }
-    kapt 'com.github.hotchemi:permissionsdispatcher-processor:3.2.0'
+    kapt 'com.github.hotchemi:permissionsdispatcher-processor:3.3.1'
 
     testImplementation 'junit:junit:4.12'
 
