@@ -2,6 +2,7 @@ package com.yagi2.swirm
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.location.Location
@@ -51,6 +52,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        if (resultCode != Activity.RESULT_OK) return
         when (requestCode) {
             REQUEST_4SQ_CONNECT -> {
                 val code = FoursquareOAuth.getAuthCodeFromResult(resultCode, data)
