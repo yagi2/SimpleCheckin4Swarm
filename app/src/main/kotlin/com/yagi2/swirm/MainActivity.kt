@@ -31,9 +31,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
         setContentView(R.layout.activity_main)
 
         initMap()
-
-        //TODO DEBUGコード、AccessTokenが存在しないならダイアログを出して誘導する
-        startActivityForResult(FoursquareOAuth.getConnectIntent(this, getString(R.string.client_id)), REQUEST_4SQ_CONNECT)
+        checkAccessToken()
     }
 
     override fun onMapReady(googleMap: GoogleMap) {
@@ -52,7 +50,11 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (resultCode != Activity.RESULT_OK) return
+        if (resultCode != Activity.RESULT_OK) {
+            checkAccessToken()
+            return
+        }
+
         when (requestCode) {
             REQUEST_4SQ_CONNECT -> {
                 val code = FoursquareOAuth.getAuthCodeFromResult(resultCode, data)
@@ -80,6 +82,11 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback, LocationListener {
                 .commit()
 
         mapFragment.getMapAsync(this)
+    }
+
+    private fun checkAccessToken() {
+        //TODO DEBUGコード、AccessTokenが存在しないならダイアログを出して誘導する
+        startActivityForResult(FoursquareOAuth.getConnectIntent(this, getString(R.string.client_id)), REQUEST_4SQ_CONNECT)
     }
 
     @SuppressLint("MissingPermission")
